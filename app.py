@@ -14,7 +14,6 @@ def greeting(name, job):
     return "Hello " + name + ", you are a " + job + ", which is a very interesting job."
 
 # create a web app that takes in a user's name and job title, and prints out a customized greeting based on their job
-# import Flask
 from flask import Flask, render_template, request
 
 # create an instance of the Flask class
@@ -28,13 +27,8 @@ def index():
 @app.route("/greeting", methods=["POST"])
 def greetings():
     # call the above greeting function, passing in the name and job title from the form submission in the greeting.html file
-    # call the greeting function
     return render_template("greetings.html", greeting=greeting(request.form.get("name"), request.form.get("job")))
 
 # run the app
 if __name__ == "__main__":
     app.run(debug=True)
-
-# create a greeting html page that renders the greeting
-# Path: templates/greeting.html
-
