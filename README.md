@@ -1,4 +1,4 @@
-# This is a simple application that greets people.
+# This is a simple application that greets people!
 It is written in Python, takes a name as input and prints a greeting to the screen.
 ## Usage
 To run the application, use the following command:
